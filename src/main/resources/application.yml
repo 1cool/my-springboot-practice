@@ -3,8 +3,14 @@ spring:
     url: jdbc:mysql://localhost:3306/martech_sit_db?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false
     username: root
     password: 1688
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
 
 logging:
   path: ./logs
   config: classpath:logback.xml
+
 
