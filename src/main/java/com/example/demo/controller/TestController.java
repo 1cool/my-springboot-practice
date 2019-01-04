@@ -14,8 +14,8 @@ public class TestController {
 
     @RequestMapping(value = "index", method = RequestMethod.GET)
     public BaseResponse index() {
-        testService.test();
 
-        return BaseResponse.success(1);
+
+        return BaseResponse.success(testService.test());
     }
 }

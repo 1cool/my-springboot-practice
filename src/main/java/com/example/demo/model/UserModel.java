@@ -1,5 +1,7 @@
 package com.example.demo.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
@@ -12,6 +14,7 @@ public class UserModel extends BaseModel {
     @Column(unique = true, nullable = false, columnDefinition = "varchar(11) COMMENT '电话号码'")
     private String mobile;
     @Column(nullable = false, columnDefinition = "varchar(64) COMMENT '密码'")
+    @JsonIgnore
     private String password;
 
 
